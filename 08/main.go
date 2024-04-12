@@ -8,6 +8,21 @@ import (
 )
 
 func main() {
+	// How Array declartion works?
+
+	// "[]" holds the array size
+	// "[3]string" or "[10]int"
+
+	// You can fill the array on declaration using "{}"
+	// "[]int{1,2,3}" or "[]string{"fa", "fi"}"
+
+	// You can fill some and let others with default value
+	// "[6]int{1,2}"
+
+	// You can tell the function the size of the array
+	// "func x(foobar [3]string)"
+	// So it will refuse others sizes
+
 	messages, err := great_everybody([]string{
 		"foo",
 		"bar",
@@ -22,6 +37,10 @@ func main() {
 }
 
 func great_everybody(names []string) (map[string]string, error) {
+	// How Map declaration works?
+	// You use "make" when you need to allocate space in the heap
+	// Map doesn't have a fix size, so you need to request space
+
 	messages := make(map[string]string)
 
 	for _, name := range names {
