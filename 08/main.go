@@ -43,6 +43,7 @@ func great_everybody(names []string) (map[string]string, error) {
 
 	messages := make(map[string]string)
 
+	// "range" is a keyword that iterates over many structures
 	for _, name := range names {
 		message, err := Hello(name)
 
